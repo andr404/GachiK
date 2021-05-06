@@ -1,0 +1,14 @@
+create table Users(
+	user_id uuid primary key DEFAULT uuid_generate_v4(),
+	login VARCHAR(100) NOT NULL,
+	password VARCHAR(100) NOT NULL,
+	data jsonb NOT NULL
+);
+INSERT INTO Users(login,password,data)
+values('codbo2012@mail.ru','fd44cf5c716a0385eab4d9e84f13c454','
+	   {
+	   "name":"Semen",
+	   "lastname":"Slave",
+	   "role":"user",
+	   "other_date":{}
+	   }');
