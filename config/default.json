@@ -1,0 +1,8 @@
+{
+  "port": 5000,
+  "dbPort": 5432,
+  "dbHost": "localhost",
+  "dbName": "gachiKDB",
+  "dbLogin": "postgres",
+  "dbPassword": "admin"
+}

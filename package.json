@@ -11,8 +11,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "config": "^3.3.6",
     "express": "^4.17.1",
-    "mongoose": "^5.12.3"
+    "mongoose": "^5.12.3",
+    "pg-promise": "^10.10.2"
   },
   "devDependencies": {
     "concurrently": "^6.0.0",
