@@ -12,9 +12,9 @@ const PORT = config.get('port') || 5000
 
 app.listen(PORT, () => console.log('Server started'))
 
-db.one("SELECT login from users where user_id=1")
+db.one("SELECT data from users where user_id='34a3a3bb-facf-4a77-9795-40c82a1caeda'")
     .then(function (data) {
-        console.log("DATA:", data.login);
+        console.log("DATA:", data.data.name);
     })
     .catch(function (error) {
         console.log("ERROR:", error);
