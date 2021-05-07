@@ -1,14 +1,15 @@
 import React from 'react'
 import {Switch, Route} from 'react-router-dom'
-import {regPage} from './pages/RegPage.js'
+import ReactDOM from "react-dom";
+import {RegPage} from './pages/RegPage.js'
 import {AuthPage} from './pages/AuthPage.js'
 
 export const useRoutes = isAunthenticated => {
-    if(isAunthenticated){
+    if (isAunthenticated) {
         return (
             <Switch>
                 <Route path="/registration" exact>
-                    <regPage />
+                    <RegPage/>
                 </Route>
             </Switch>
         )
@@ -16,8 +17,12 @@ export const useRoutes = isAunthenticated => {
     return (
         <Switch>
             <Route path="/" exact>
-                <AuthPage />
+                <AuthPage/>
             </Route>
+            <Route path="/registration" exact>
+                <RegPage/>
+            </Route>
+
         </Switch>
     )
 }

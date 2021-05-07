@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../index.gif';
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+import {Link} from "react-router-dom";
 
 export const AuthPage = () => {
     return (
@@ -10,17 +11,19 @@ export const AuthPage = () => {
                 <img src={logo} className="App-logo Image-right" alt="logo" align={"right"}/>
                 <img src={logo} className="App-logo Image-left" alt="logo" align={"right"}/>
                 <div className="card-action" align={"center"}>
-                    ♂GachiK♂
-                    <p>
-                    <TextField id={"outlined-basic"} label={"♂Логин♂"} variant="outlined" color="primary" /><br/>
-                    </p>
-                    <TextField id={"outlined-basic"} label={"♂Пароль♂"} variant="outlined" color="primary" /><br/>
-                    <p>
+                    <div className="rectangle">
+                    ♂GachiK♂<br/>
+                    <TextField id={"outlined-basic"} label={"♂Логин♂"} variant="outlined" color="primary"/><br/>
+                    <TextField id={"outlined-basic"} label={"♂Пароль♂"} variant="outlined" color="primary"/><br/>
                     <Button variant="contained">♂ASS♂</Button><br/>
-                    </p>
-                    <Button variant="contained">♂Регистрация♂</Button>
+                    <Button onClick={GoToReg} variant="contained">♂Регистрация♂</Button>
+                    </div>
                 </div>
             </header>
         </div>
     )
+}
+
+function GoToReg() {
+    window.open("/registration", "_self")
 }
